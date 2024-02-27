@@ -23,6 +23,7 @@ export interface DocViewerProps {
   pluginRenderers?: DocRenderer[];
   prefetchMethod?: string;
   requestHeaders?: Record<string, string>;
+  fetchOptions?: RequestInit;
   initialActiveDocument?: IDocument;
   language?: AvailableLanguages;
   activeDocument?: IDocument;

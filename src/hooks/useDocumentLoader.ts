@@ -42,6 +42,7 @@ export const useDocumentLoader = (): {
           prefetchMethod || documentURI.startsWith("blob:") ? "GET" : "HEAD",
         signal,
         headers: state?.requestHeaders,
+        ...state?.fetchOptions,
       })
         .then((response) => {
           const contentTypeRaw = response.headers.get("content-type");
@@ -95,6 +96,7 @@ export const useDocumentLoader = (): {
       signal,
       fileLoaderComplete,
       headers: state?.requestHeaders,
+      fetchOptions: state?.fetchOptions,
     };
 
     if (CurrentRenderer === null) {

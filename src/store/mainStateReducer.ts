@@ -26,6 +26,7 @@ export type IMainState = {
   pluginRenderers?: DocRenderer[];
   prefetchMethod?: string;
   requestHeaders?: Record<string, string>;
+  fetchOptions?: RequestInit;
   language: AvailableLanguages;
   activeDocument?: IDocument;
   onDocumentChange?: (document: IDocument) => void;
